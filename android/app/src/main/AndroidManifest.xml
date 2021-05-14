@@ -2,6 +2,7 @@
     package="com.example.gorin">
    <application
         android:label="gorin"
+        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

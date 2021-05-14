@@ -4,14 +4,18 @@ class myField extends StatelessWidget {
   const myField({
     Key key,
     @required this.hintText,
-    this.suffixIcon
+    this.suffixIcon,
+    this.controller,
+    this.obscureText
   }) : super(key: key);
-  final hintText,suffixIcon;
+  final hintText,suffixIcon,controller,obscureText;
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
       child: TextField(
+        controller: controller,
+        obscureText: obscureText??false,
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
@@ -35,6 +39,7 @@ class myField extends StatelessWidget {
     );
   }
 }
+
 class MyButton extends StatelessWidget {
   const MyButton({
     Key key,

@@ -1,9 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gorin/Views/HomeScreen.dart';
 import 'package:gorin/Views/Login.dart';
 import 'package:gorin/Views/Register.dart';
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
