@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "190108358650",
+    "project_id": "gorin-system",
+    "storage_bucket": "gorin-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190108358650:android:47380e74718c875415b643",
+        "android_client_info": {
+          "package_name": "com.example.gorin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190108358650-7am2plp6v5fc5c1ivomspreubpl06pi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfWaViFdbwgpBIjPFLrO_kOec6OC9SA18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190108358650-7am2plp6v5fc5c1ivomspreubpl06pi1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "190108358650-qgp72cd6mosiacrqpfj0dshn6qu8v26l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gorin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
