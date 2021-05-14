@@ -22,7 +22,7 @@ class Login extends StatelessWidget {
                     child: Icon(Icons.clear,color: Colors.grey,)),
                 SizedBox(height: (Get.height/10)*2,),
                 Text(
-                  "Sign Up with email",
+                  "Login with email",
                   style: TextStyle(
                       color: util.circularAvtarColor,
                       fontSize: 16,
@@ -53,27 +53,8 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20,),
-                Card(
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: util.buttonColor,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                          color: util.textColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16
-
-                      ),
-                    ),
-                  ),
+                MyButton(
+                  text: "Login",onTap: ()=>Get.offAndToNamed('/home_screen'),
                 ),
                 SizedBox(height: 35,),
                 Text(
@@ -85,13 +66,16 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 15,),
-                Text(
-                  'Sign Up',
-                  style: TextStyle(
-                      color: util.textColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16
+                GestureDetector(
+                  onTap: ()=>Get.toNamed('/register'),
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                        color: util.textColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16
 
+                    ),
                   ),
                 ),
 

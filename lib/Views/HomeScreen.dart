@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:gorin/Utils/Constants.dart' as util;
+import 'package:gorin/Utils/CustomWidgets.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,11 +45,18 @@ class HomeScreen extends StatelessWidget {
                         ),
                         index!=4?Divider(
                           thickness: 1,
-                        ):Container()
+                        ):Column(
+                          children: [
+                            SizedBox(height: 10,),
+                            MyButton(
+                              text: "Logout",onTap: ()=>Get.offAndToNamed('/')
+                            ),
+                          ],
+                        ),
                       ],
                     );
                   }
-              )
+              ),
 
 
             ],

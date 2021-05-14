@@ -11,13 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: HomeScreen(),
-      // routes: {
-      //   // '/':(context)=>Register(),
-      //   '/login':(context)=>Login(),
-      //
-      // }
+      routes: {
+        '/':(context)=>Login(),
+        '/register':(context)=>Register(),
+        '/home_screen':(context)=>HomeScreen(),
+
+
+      }
     );
   }
 }

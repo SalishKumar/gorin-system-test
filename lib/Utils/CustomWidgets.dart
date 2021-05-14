@@ -35,3 +35,41 @@ class myField extends StatelessWidget {
     );
   }
 }
+class MyButton extends StatelessWidget {
+  const MyButton({
+    Key key,
+    @required this.text,
+    @required this.onTap,
+  }) : super(key: key);
+  final text,onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Card(
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10)
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+              color: util.buttonColor,
+              borderRadius: BorderRadius.circular(10)
+          ),
+          padding: EdgeInsets.all(20),
+          child: Text(
+            text,
+            style: TextStyle(
+                color: util.textColor,
+                fontWeight: FontWeight.bold,
+                fontSize: 16
+
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+

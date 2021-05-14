@@ -7,6 +7,14 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: util.backgroundColor,
+          elevation: 0,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios,color: Colors.grey,),
+            onPressed: ()=>Get.back(),
+          ),
+        ),
         backgroundColor: util.backgroundColor,
         body: SingleChildScrollView(
           child: Padding(
@@ -78,6 +86,7 @@ class Register extends StatelessWidget {
                 ),
                 SizedBox(height: 15,),
                 GestureDetector(
+                  onTap: ()=>Get.back(),
                   child: Text(
                     'Login',
                     style: TextStyle(
