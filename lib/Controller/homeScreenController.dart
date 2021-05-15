@@ -7,4 +7,8 @@ class HomeSceenController extends GetxController{
   logout(){
     fire.logout();
   }
+  @override
+  void dispose() {
+    super.dispose();
+  }
 }

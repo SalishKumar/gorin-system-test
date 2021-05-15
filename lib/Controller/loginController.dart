@@ -8,6 +8,12 @@ class LoginController extends GetxController{
   User user = User();
   TextEditingController passCon = TextEditingController();
   TextEditingController emailCon = TextEditingController();
+  @override
+  void dispose() {
+    passCon.dispose();
+    emailCon.dispose();
+    super.dispose();
+  }
   var hidePass = true.obs;
   var load = false.obs;
   login()async{

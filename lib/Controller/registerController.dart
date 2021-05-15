@@ -13,7 +13,14 @@ class RegisterController extends GetxController{
   var load = false.obs;
   TextEditingController passCon = TextEditingController();
   var hidePass = true.obs;
+  @override
+  void dispose() {
+    nameCon.dispose();
+    emailCon.dispose();
+    passCon.dispose();
 
+    super.dispose();
+  }
 
   @override
   void onInit() {
