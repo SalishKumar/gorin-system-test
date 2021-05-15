@@ -65,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 Container(),
                                 MyButton(
-                                    text: "Logout",onTap: ()=>Get.offAndToNamed('/')
+                                    text: "Logout",onTap: ()=>controller.logout()
                                 ),
                               ],
                             );
@@ -99,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                                 children: [
                                   SizedBox(height: 10,),
                                   MyButton(
-                                      text: "Logout",onTap: ()=>Get.offAndToNamed('/')
+                                      text: "Logout",onTap: ()=>controller.logout()
                                   ),
                                 ],
                               ),

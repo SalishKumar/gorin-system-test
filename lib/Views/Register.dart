@@ -95,8 +95,7 @@ class Register extends StatelessWidget {
                     SizedBox(height: 10,),
                     myField(hintText: "Email",controller: controller.emailCon),
                     SizedBox(height: 10,),
-                    Obx(
-                      ()=> myField(
+                    myField(
                         hintText: "Password",
                           obscureText: controller.hidePass.value,
                           controller: controller.passCon,
@@ -107,7 +106,7 @@ class Register extends StatelessWidget {
                           icon: Icon(Icons.remove_red_eye,color: Colors.grey,)
                         ),
                       ),
-                    ),
+
                     SizedBox(height: 30,),
                     MyButton(
                         text: 'Sign Up',
