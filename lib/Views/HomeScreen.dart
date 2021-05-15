@@ -5,10 +5,10 @@ import 'package:gorin/Controller/homeScreenController.dart';
 import 'package:gorin/Utils/Constants.dart' as util;
 import 'package:gorin/Utils/CustomWidgets.dart';
 class HomeScreen extends StatelessWidget {
-  HomeSceenController controller = Get.put(HomeSceenController());
   String email = Get.arguments;
   @override
   Widget build(BuildContext context) {
+    HomeSceenController controller = Get.put(HomeSceenController());
     return SafeArea(
       child: Scaffold(
         backgroundColor: util.backgroundColor,
@@ -31,7 +31,6 @@ class HomeScreen extends StatelessWidget {
               StreamBuilder<QuerySnapshot>(
                   stream: controller.collectionStream,
                   builder: (context,snapshot){
-                    print(snapshot.data.documents.length);
                     if (snapshot.hasError) {
                       return Text('Something went wrong');
                     }
