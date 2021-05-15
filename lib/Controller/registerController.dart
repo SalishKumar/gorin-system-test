@@ -13,6 +13,8 @@ class RegisterController extends GetxController{
   var load = false.obs;
   TextEditingController passCon = TextEditingController();
   var hidePass = true.obs;
+
+
   @override
   void onInit() {
     // TODO: implement onInit
@@ -37,7 +39,7 @@ class RegisterController extends GetxController{
      bool status = await fire.registerUser(user.value);
       print("Iam here1");
       if(status){
-       Get.offAllNamed('/home_screen');
+        Get.offAllNamed('/home_screen',arguments:user.value.email);
      }
     }
 
