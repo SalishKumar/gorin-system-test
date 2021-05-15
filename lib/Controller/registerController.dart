@@ -48,11 +48,15 @@ class RegisterController extends GetxController{
     Get.back();
     try {
       var choosedimage = await imagePicker.getImage(source: ImageSource.camera,imageQuality: 50);
-      user.value.image =choosedimage.path;
+      user.update((val) {
+        val.image = choosedimage.path;
+      });
 
     } catch (e) {
       print(e);
-      user.value.image = "";
+      user.update((val) {
+        val.image = "";
+      });
     }
   }
   galleryCover()async{
