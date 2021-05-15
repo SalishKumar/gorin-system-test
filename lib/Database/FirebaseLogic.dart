@@ -7,6 +7,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:gorin/Models/User.dart' as myUser;
+import 'package:gorin/Views/Login.dart';
 import 'dart:io';
 import 'package:path/path.dart';
 FirebaseAuth firebaseAuth = FirebaseAuth.instance;
@@ -85,25 +86,15 @@ loginUser(myUser.User user)async{
 
 
 }
-logout(){
-  firebaseAuth.signOut();
-  Get.offAndToNamed('/');
+Future<void> logout()async{
+  await firebaseAuth.signOut();
+  Get.offAll(Login());
 
 }
 
-_userFromFirebaseUser(FirebaseUser user) {
-  if(user!=null){
-    Get.offAllNamed('/home_screen',arguments:user.email);
-  }
 
-}
-
-// Stream<User> get user {
-//   return _auth.onAuthStateChanged.map(_userFromFirebaseUser);
-// }
 autoLogin()async{
   print("%%^^&");
-  // firebaseAuth.onAuthStateChanged.map(_userFromFirebaseUser);
   FirebaseUser user = await firebaseAuth.currentUser();
   if(user!=null){
     Get.offAllNamed('/home_screen',arguments:user.email);
